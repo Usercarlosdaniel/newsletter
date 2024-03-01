@@ -1,0 +1,208 @@
+:root {
+  /* Primary */
+  --tomato: hsl(4, 100%, 67%);
+  /* Neutral */
+  --dark-slate-grey: hsl(234, 29%, 20%);
+  --charcoal-grey: hsl(235, 18%, 26%);
+  --grey: hsl(231, 7%, 60%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  font-size: 16px;
+  background: var(--charcoal-grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.container {
+  background: var(--white);
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  border-radius: 2rem;
+  max-width: 50rem;
+  box-shadow: 0 0 20px var(--dark-slate-grey);
+}
+
+.hide {
+  display: none;
+}
+
+.container .side:first-child {
+  padding: 3rem 2rem;
+}
+
+.container .side:first-child h1 {
+  font-size: 3.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--dark-slate-grey);
+}
+
+.container .side:first-child p {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.container .side:first-child ul {
+  list-style-image: url(assets/images/icon-list.svg);
+  margin-bottom: 1.2rem;
+  list-style-position: inside;
+}
+.container .side:first-child ul li {
+  line-height: 2;
+}
+
+.container .side:first-child .form {
+  width: 90%;
+}
+
+.container .side:first-child .form input {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  margin-top: 0.2rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--grey);
+  color: var(--grey);
+  cursor: text;
+}
+
+.container .side:first-child .form input.active {
+  border: 1px solid var(--tomato);
+  background: hsl(4, 100%, 67%, 0.2);
+}
+
+.container .side:first-child .form input.active::placeholder {
+  color: var(--tomato);
+}
+
+.container .side:first-child .form label {
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container .side:first-child .form label #invalid-email {
+  color: var(--tomato);
+  display: none;
+}
+
+.container .side:first-child .form .btn {
+  display: block;
+  margin: 0 auto;
+  background: var(--dark-slate-grey);
+  color: var(--white);
+  border: none;
+  border-radius: 0.45rem;
+  padding: 0.8rem;
+  font-size: 1rem;
+  font-weight: 700;
+  width: 100%;
+  cursor: pointer;
+}
+.container .side:first-child .form .btn:hover {
+  background: linear-gradient(to right, var(--tomato), orange);
+  box-shadow: 0px 0 15px var(--tomato);
+}
+
+.container-sucess {
+  background: var(--white);
+  width: 30rem;
+  padding: 3rem 2rem;
+  border-radius: 2rem;
+}
+
+.container-sucess img {
+  margin-bottom: 1rem;
+}
+
+.container-sucess h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.container-sucess p {
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.container-sucess .btn {
+  display: block;
+  margin: 0 auto;
+  background: var(--dark-slate-grey);
+  color: var(--white);
+  border: none;
+  border-radius: 0.45rem;
+  padding: 0.8rem;
+  font-size: 1rem;
+  font-weight: 700;
+  width: 100%;
+  cursor: pointer;
+}
+
+.container-sucess .btn:hover {
+  background: linear-gradient(to right, var(--tomato), orange);
+  box-shadow: 0px 0 15px var(--tomato);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: var(--white);
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 768px) {
+  body {
+    justify-content: start;
+  }
+
+  .container {
+    flex-direction: column-reverse;
+    width: 95%;
+    padding: 0;
+    border-radius: 0 0 2rem 2rem;
+  }
+
+  .container .side:last-child img {
+    content: url(assets/images/illustration-sign-up-mobile.svg);
+    width: 100%;
+  }
+
+  .container-sucess {
+    width: 95%;
+    border-radius: 0 0 2rem 2rem;
+    height: 95vh;
+  }
+
+  .container-sucess img {
+    margin-top: 2rem;
+  }
+
+  .container-sucess h1 {
+    margin: 2rem 0;
+  }
+}
